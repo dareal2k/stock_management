@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     
+ </head>
+ <body>
+  <div>
+     <div>
+          <input type="button" id="btnAdd" value="add">
+          <input type="button" id="btnDelete" value="delete">
+     </div>
+     <div id="grid"></div>
+  </div>
+ </body>
+ <% include ../partial/head.ejs %>
+ <script type="text/javascript" class="code-js">
+     var grid = new tui.Grid({
+         el: $('#grid'),
+         data: gridData,
+         scrollX: false,
+         scrollY: false,
+         rowHeaders: ['checkbox'],
+         columns: [
+             {
+                 title: '종목(코드)',
+                 name: 'name',
+                 editOptions: {
+                    type: 'text',
+                    useViewMode: true
+                 }
+             },
+             {
+                 title: '현재가',
+                 name: 'currentPrice'
+             },
+             {
+                 title: '1차 매수',
+                 name: 'buy1'
+             },
+             {
+                 title: '1차 수량',
+                 name: 'buyAmount1'
+             },
+             {
+                 title: '2차 매수',
+                 name: 'buy2'
+             },
+             {
+                 title: '2차 매수',
+                 name: 'buyAmount2'
+             },
+             {
+                 title: '3차 매수',
+                 name: 'buy3'
+             },
+             {
+                 title: '3차 수량',
+                 name: 'buyAmount3'
+             },
+             {
+                 title: '1차 매도',
+                 name: 'sell1'
+             },
+             {
+                 title: '1차 수량',
+                 name: 'sellAmount2'
+             },
+             {
+                 title: '2차 매도',
+                 name: 'sell2'
+             },
+             {
+                 title: '2차 수량',
+                 name: 'sellAmount2'
+             },
+             {
+                 title: '3차 매도',
+                 name: 'sell3'
+             },
+             {
+                 title: '3차 수량',
+                 name: 'sellAmount3'
+             },
+             {
+                  title: '기간',
+                  name: 'limitDate',
+                  editOptions: {
+                    type: 'text',
+                    useViewMode: false
+                  },
+                  component: {
+                     name: 'datePicker'
+                  }
+             }
+         ]
+     });
+
+     </script>
+</html>
+
+

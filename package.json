@@ -1,0 +1,13 @@
+{
+  "name": "stock_management",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "~1.14.2",
+    "ejs": "~2.4.1",
+    "express": "~4.13.1",
+    "express-session": "~1.13.0",
+    "mongoose": "^5.4.17",
+    "nodemon": "^1.18.10",
+    "tui-grid": "^3.6.0"
+  }
+}
